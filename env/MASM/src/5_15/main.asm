@@ -1,24 +1,18 @@
-comment*
-Max value in array
-
+comment    *
 c++
 数组当中的最大值
-int res = 0
-for(int i = 0; i < str.size(); i++)
-    if(res < s[i])
-        res = s[i];
+int res=0
+for(int i=0;i<str.size();i++)if(res<s[i])res=s[i];
 return res
 
 求最小值
-int res = FF
-for(int i = 0; i < str.size(); i++)
-    if(res > s[i])
-        res = s[i];
+int res=FF
+for(int i=0;i<str.size();i++)if(res>s[i])res=s[i];
 return res
 
-for(int i = 0; i < str.size(); i++)
-    str[i]转大写
-*comment
+
+for(int i=0;i<str.size();i++)str[i]转大写
+* comment
 
 assume cs:code,ds:data,ss:stack
 
@@ -32,16 +26,16 @@ stack ends
 
 code segment
 	start:
-        mov ax,data
-        mov ds,ax
+	mov ax,data
+	mov ds,ax
 
-        mov bx,0
-        mov cx,11
-        mov ah,0FFh
+	mov bx,0
+	mov cx,11
+	mov ah,0
 	s:
 		mov al,[bx]
 		cmp ah,al
-		jna s1
+		jnb s1
 		mov ah,al
 	s1:
 		; mov [bx],al
