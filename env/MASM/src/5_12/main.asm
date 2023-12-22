@@ -1,6 +1,5 @@
+; String from lower case to upper case.
 comment *
-String from lower case to upper case.
-
 c++
 数组当中的最大值
 int res = 0

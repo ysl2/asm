@@ -1,8 +1,9 @@
-; Sum array.
+; Reverse array.
 assume cs:code, ds:data, ss:stack
 
 data segment
-    arr db 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30
+    arr db 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+    res db 10 dup (0)
 data ends
 
 stack segment
@@ -15,12 +16,14 @@ code segment
         mov ds, ax
 
         mov ax, 0
-        mov bx, 0
-        mov cx, 30
+        mov si, 0
+        mov di, 9
+        mov cx, 10
         for:
-            add al, arr[bx]
-            adc ah, 0
-            inc bx
+            mov al, arr[si]
+            mov res[di], al
+            inc si
+            dec di
         loop for
 
         ; mov dx, ax

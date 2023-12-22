@@ -1,6 +1,5 @@
+; Get the min value of the array (string type, use ascii).
 comment*
-Max value in array
-
 c++
 数组当中的最大值
 int res = 0

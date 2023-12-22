@@ -1,3 +1,4 @@
+; Get the max value of the array (string type, use ascii).
 comment    *
 c++
 数组当中的最大值
