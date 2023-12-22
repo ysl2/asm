@@ -6,7 +6,7 @@ data segment
 data ends
 
 stack segment
-    db 10h dup (0)
+    db 16 dup (0)
 stack ends
 
 code segment
@@ -16,7 +16,7 @@ code segment
 
         mov ax, stack
         mov ss, ax
-        mov sp, 10h
+        mov sp, 16
 
         mov bx, 0
         mov cx, 8
@@ -33,6 +33,6 @@ code segment
         loop for1
 
         mov ax, 4C00h
-        int 21
+        int 21h
 code ends
 end start

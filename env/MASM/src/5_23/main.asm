@@ -30,7 +30,7 @@ code segment
         ; mov ah, 9
         ; int 21
 
-        mov ax, 4c00h
-        int 21
+        mov ax, 4C00h
+        int 21h
 code ends
 end start

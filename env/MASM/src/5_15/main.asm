@@ -15,10 +15,10 @@ return res
 for(int i=0;i<str.size();i++)str[i]转大写
 * comment
 
-assume cs:code,ds:data,ss:stack
+assume cs:code, ds:data, ss:stack
 
 data segment
-    str db 'hello world','$'
+    str db 'hello world', '$'
 data ends
 
 stack segment
@@ -27,28 +27,28 @@ stack ends
 
 code segment
     start:
-    mov ax,data
-    mov ds,ax
+    mov ax, data
+    mov ds, ax
 
-    mov bx,0
-    mov cx,11
-    mov ah,0
+    mov bx, 0
+    mov cx, 11
+    mov ah, 0
     s:
-        mov al,[bx]
-        cmp ah,al
+        mov al, [bx]
+        cmp ah, al
         jnb s1
-        mov ah,al
+        mov ah, al
     s1:
-        ; mov [bx],al
+        ; mov [bx], al
         inc bx
         loop s
 
-        ; mov dx,offset str
-        lea dx,str
-        mov ah,9
+        ; mov dx, offset str
+        lea dx, str
+        mov ah, 9
         int 21h
 
-        mov ah,4Ch
+        mov ah, 4Ch
         int 21h
 code ends
 end start

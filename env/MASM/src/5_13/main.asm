@@ -19,10 +19,10 @@ for(int i = 0; i < str.size(); i++)
     str[i]转大写
 * comment
 
-assume cs:code,ds:data,ss:stack
+assume cs:code, ds:data, ss:stack
 
 data segment
-    str db 'HELLO WORLD','$'
+    str db 'HELLO WORLD', '$'
 data ends
 
 stack segment
@@ -31,24 +31,24 @@ stack ends
 
 code segment
     start:
-        mov ax,data
-        mov ds,ax
+        mov ax, data
+        mov ds, ax
 
-        mov bx,0
-        mov cx,11
+        mov bx, 0
+        mov cx, 11
     s:
-        mov al,[bx]
-        or al,0100000b
-        mov [bx],al
+        mov al, [bx]
+        or al, 0100000b
+        mov [bx], al
         inc bx
         loop s
 
-        ; mov dx,offset str
-        lea dx,str
-        mov ah,9
+        ; mov dx, offset str
+        lea dx, str
+        mov ah, 9
         int 21h
 
-        mov ah,4Ch
+        mov ah, 4Ch
         int 21h
 code ends
 

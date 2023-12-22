@@ -1,7 +1,7 @@
+; Fibonacci
 assume cs:code, ds:data, ss:stack
 data segment
-    arr dw 1h, 1h, 100 dup (0)
-    res db 800 dup (0)
+    arr dw 1, 1, 100 dup (0)
 data ends
 
 stack segment
@@ -23,10 +23,10 @@ code segment
             add dx, arr[bx - 2]
             add dx, arr[bx - 4]
             mov arr[bx], dx
-        add bx, 2
+            add bx, 2
         loop for
 
         mov ax, 4C00h
-        int 21
+        int 21h
 code ends
 end start

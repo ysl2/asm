@@ -2,7 +2,7 @@
 assume cs:code, ds:data, ss:stack
 
 data segment
-    str db 'hello world', '$'
+    db 10 dup (0)
 data ends
 
 stack segment
@@ -11,13 +11,7 @@ stack ends
 
 code segment
     start:
-        mov ax, data
-        mov ds, ax
-        lea dx, str
-        mov ah, 9
-        int 21h
-
-        mov ah, 4Ch
+        mov ax, 4C00h
         int 21h
 code ends
 
