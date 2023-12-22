@@ -53,11 +53,11 @@ code segment
             add bx, 16
         loop for
 
-    lea dx, str
-    mov ah, 9
-    int 21h
+        lea dx, str
+        mov ah, 9
+        int 21h
 
-    mov ah, 4Ch
-    int 21h
+        mov ah, 4Ch
+        int 21h
 code ends
 end start
